@@ -1,0 +1,38 @@
+ <% layout("/layouts/boilerplate.ejs") -%>
+ 
+ <div class="container" id="container">
+    <div class="form-container sign-up-container">
+      <form>
+        <h1>Create Account</h1>
+        <input type="text" placeholder="Name"  class="size"/>
+        <input type="email" placeholder="Email" />
+        <input type="password" placeholder="Password" />
+        <button>Sign Up</button>
+      </form>
+    </div>
+    <div class="form-container sign-in-container">
+      <form>
+        <h1>Login</h1>
+        <p>Or sign in using E-Mail Address</p>
+        <input type="email" placeholder="Email" class="email" />
+        <input type="password" placeholder="Password" class="email"/>
+        <p>Forget your Password?</p>
+        <button>LOGIN</button>
+      </form>
+    </div>
+    <div class="overlay-container">
+      <div class="overlay">
+        <div class="overlay-panel overlay-left">
+          <h1>Welcome Back!</h1>
+          <p>To keep connected with us please login</p>
+          <button class="ghost" id="signIn">Sign In</button>
+        </div>
+        <div class="overlay-panel overlay-right">
+          <h1>Create,</h1>
+          <h1>Account!</h1>
+          <p>Haven't signed up yet?</p>
+          <button class="ghost" id="signUp"><a href="/signup">SIGN UP</a></button>
+        </div>
+      </div>
+    </div>
+  </div>
