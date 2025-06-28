@@ -1,3 +1,4 @@
+
 /* Base & layout */
 * {
   box-sizing: border-box;
@@ -205,4 +206,140 @@ button.ghost {
 
 button.ghost:hover {
   transform: scale(1.1);
+=======
+
+*{
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100vh;
+    
+    background-color: #f0f2f5;
+    background:linear-gradient(180deg,rgb(192,232,243),rgb(1,92,117));
+    font-family: 'Fixedsys';
+
+}
+
+.t {
+    font-family:Britannic;
+
+    font-size: 24px;
+    font-weight: bold;
+    margin-left:5px;
+}
+
+.node {
+    color: #f0f2f5
+}
+
+.nav {
+    width: 96.5vw;
+    background-color: black;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #007BFF;
+}
+
+a {
+    /* background-color: rgb(80, 190, 220); */
+    background-color:  #007BFF;
+    text-decoration: none;
+
+    border-radius: 30px;
+    padding: 10px 20px;
+    margin: 0px 10px;
+    color:white;
+}
+
+a:hover {
+
+    transform: scale(1.1);
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.textt {
+    border-radius: 40px;
+    margin: 2rem;
+    padding: 10px;
+    width: 55rem; 
+    height: 5rem;
+    font-size:20px;
+}
+
+.button {
+    margin-top: 25px;
+    display: flex;
+    width: 52vw;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+button {
+    background-color: #0bcdfefa;
+    border: 2px solid transparent;
+    padding: 15px 25px;
+    border-radius: 30px;
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+
+}
+
+button:hover {
+
+    /* background-color: rgba(80, 190, 220, 0.177); */
+    transform: scale(1.1);
+
+}
+
+.aimsg{
+    display:flex;
+    justify-content: start;
+    width:58vw;
+    background-color: rgba(250, 252, 252, 0.43);
+    border-radius: 50px;
+    padding:10px;
+}
+
+.usermsg
+{
+    margin: 10px;
+  display:flex;
+    justify-content: end;
+    width:58vw;
+    background-color: rgba(250, 252, 252, 0.43);
+    border-radius: 50px;
+    padding:10px;
+  
+}
+
+@media(width>400){
+    .textt {
+        border-radius: 40px;
+        
+        width: 5rem;
+        height: 5rem;
+        font-size:20px;
+    }
+    
+
+
 }
