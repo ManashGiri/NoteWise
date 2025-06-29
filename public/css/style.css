@@ -250,7 +250,7 @@ button.ghost:hover {
   margin-left: 5px;
 }
 
-.t a{
+.t a {
   display: flex;
   text-decoration: none;
 }
@@ -280,7 +280,8 @@ button.ghost:hover {
   padding: 10px 20px;
   margin: 0px 10px;
   color: white;
-  transition: all;
+  display: inline-block;
+  transition: transform 0.2s ease-in-out;
 }
 
 .register:hover {
@@ -534,7 +535,7 @@ a i:hover {
   }
 }
 
-@media(width>400) {
+/* @media(width>400) {
   .textt {
     border-radius: 40px;
 
@@ -543,9 +544,9 @@ a i:hover {
     font-size: 20px;
   }
 
-}
+} */
 
-@media(width<1000px) {
+/* @media(width<1000px) {
   .or {
     display: none;
   }
@@ -594,5 +595,15 @@ a i:hover {
     font-size: 15px;
     font-weight: bold;
 
+  }
+} */
+
+@media(max-width: 768px) {
+  #welcomeMessage {
+    font-size: 1rem;
+  }
+  
+  #chatForm{
+    width: 50%;
   }
 }
