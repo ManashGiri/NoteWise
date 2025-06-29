@@ -196,6 +196,10 @@ app.get("/logout", (req, res) => {
     });
 });
 
+app.get("/privacy", (req, res) => {
+    res.render("privacy.ejs");
+});
+
 app.listen(3000, () => {
     console.log("Server is listening to port 3000");
 });
