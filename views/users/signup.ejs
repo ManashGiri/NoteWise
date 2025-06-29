@@ -1,5 +1,6 @@
 <% layout("/layouts/boilerplate.ejs") -%>
   <div class="container" id="container">
+    <%- include("../includes/flash.ejs") %>
     <div class="form-container sign-up-container">
       <form>
         <h1>Create Account</h1>
@@ -10,11 +11,12 @@
       </form>
     </div>
     <div class="form-container sign-in-container">
-      <form>
+      <form action="/signup" method="POST">
         <h1>Sign up</h1>
-        <p>Or login in using E-Mail Address</p>
-        <input type="email" placeholder="Email" class="email" />
-        <input type="password" placeholder="Password" class="email"/>
+        <p>or register using e-mail address</p>
+        <input type="text" placeholder="Username" name="username" class="email" required/>
+        <input type="email" placeholder="Email" name="email" class="email" required/>
+        <input type="password" placeholder="Password" name="password" class="email" required/>
         <p>Forget your Password?</p>
         <button>SIGN UP</button>
       </form>

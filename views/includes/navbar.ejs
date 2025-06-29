@@ -1,13 +1,19 @@
-
-<header>
-    <nav class="nav">
-        <div class="t"><span class="node">Node</span>
-            <span class="wise">Wise</span>
-        </div>
-        <div class="nav-links">
-            <a href="/signup" class="register">Sign Up</a>
-            <a href="/login" class="register">Login </a>
-            <a href="/logout" class="register">Logout</a>
-        </div>
+<div>
+    <nav>
+        <nav class="navbar sticky-top">
+            <div class="t">
+                <a href="/">
+                    <span class="node">Note</span> <span class="wise">Wise</span>
+                </a>
+            </div>
+            <div class="nav-links">
+                <% if(!curUser) { %>
+                    <a href="/signup" class="register">Sign Up</a>
+                    <a href="/login" class="register">Login </a>
+                    <% } else { %>
+                        <a href="/logout" class="register">Logout</a>
+                        <% } %>
+            </div>
+        </nav>
     </nav>
-</header>
+</div>

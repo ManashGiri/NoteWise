@@ -1,17 +1,49 @@
 <% layout("/layouts/boilerplate.ejs") -%>
 
     <main>
-        <div class="usermsg"> dfgfdg </div>
-        <div class="aimsg">gdfg</div>
-        <div class="text">
-            <input type="text" placeholder="Upload Your Notes....." class="textt">
-        </div>
 
-        <div class="button">
-            <button>Summary</button>
-            <button>Quiz</button>
-            <button>Question</button>
+        <div class="chatContainer">
+            <div id="chatBox">
+                <div>
+                    <%- include("includes/flash.ejs") %>
+                </div>
+                <div id="welcomeMessage" class="text-center text-muted">
+                    Welcome &nbsp; to &nbsp; NoteWise!
+                    <div class="description">
+                        Made by Team Mach20
+                    </div>
+                    <div class="privacy">
+                        <a href="/privacy">Terms & Conditions</a>
+                    </div>
+                    <div class="aboutus">
+                        Know more about us :- <br>
+                        <a href="https://github.com/ManashGiri/NoteWise.git" target="_blank"> <i
+                                class="fa-brands fa-square-github"></i> </a>
+                        <a href="https://www.instagram.com/project_nestin/" target="_blank"> <i
+                                class="fa-brands fa-square-instagram"></i> </a>
+                        <a href="https://www.linkedin.com/in/manash-giri-128395298/" target="_blank"> <i
+                                class="fa-brands fa-linkedin"></i> </a>
+                        <a href="https://mail.google.com/mail/?view=cm&to=nestin.project.india@gmail.com&su=Feedback%20for%20Nestin&body=About%20Nestin..."
+                            target="_blank"> <i class="fa-solid fa-square-envelope"></i> </a>
+                    </div>
+                </div>
+            </div>
+
+            <form class="no-style-form" id="chatForm">
+                <div class="textt">
+                    <input type="text" name="message" id="messageInput" placeholder="Paste your notes here..."
+                        class="textt" required>
+                </div>
+
+                <div class="button">
+                    <div class="center">
+                        <button type="submit" class="search" name="action" value="summarize">Summarize</button>
+                        <button type="submit" class="search" name="action" value="quiz">Generate Quiz</button>
+                        <button type="submit" class="search" name="action" value="question">Ask / Answer</button>
+                    </div>
+                </div>
+            </form>
+
         </div>
 
     </main>
-
