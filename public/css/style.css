@@ -531,6 +531,10 @@ a i:hover {
   margin-right: 1rem;
 }
 
+.flash {
+  z-index: 9999;
+}
+
 @keyframes slideDown {
   from {
     opacity: 0;

@@ -121,8 +121,6 @@ app.post('/chat', isLoggedIn, async (req, res) => {
 
     previousMsgs.reverse();
 
-    console.log(previousMsgs);
-
     try {
         const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
             method: "POST",
