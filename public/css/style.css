@@ -628,19 +628,27 @@ a i:hover {
   }
 
   .container {
-    position: unset !important;
-    height: 200vh !important;
-    width: 200vh !important;
+    top: 0 !important;
+    border-radius: unset;
+    position: unset !important; 
+    width: 30vh !important;
     box-shadow: unset;
+    background: #f0f2f5;
+  }
+
+  form {
+    background: #f0f2f5 !important;
   }
 
   .form-container input {
+    background: #e6e5e5;
     width: 25rem !important;
     font-size: 2rem !important;
     margin-bottom: 3rem;
   }
 
   .form-container h1 {
+    color: black;
     font-size: 5rem;
     margin-bottom: 5rem;
   }
@@ -682,6 +690,10 @@ a i:hover {
   .terms h3 {
     margin-top: 2rem;
     font-size: 2.5rem;
+  }
+
+  .flash .center {
+    font-size: 1.7rem;
   }
 
 }
