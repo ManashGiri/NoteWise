@@ -97,8 +97,9 @@ app.post('/chat', isLoggedIn, async (req, res) => {
         action === 'summarize'
             ? `Summarize the following notes in short, precise, easy to understand points: \n${message}`
             : action === 'quiz' ?
-                `Make a short MCQ quiz from these notes: (One question at a time with 4 options and don't tell me the answers) \n${message}` 
+                `Generate one multiple choice question (MCQ) with four options (A–D) from the following notes: \n${message} (Please don't reveal the correct answer)` 
                 : `${message}`;
+                
 
     const count = await Conversation.countDocuments({ user: req.user._id});
     if (count >= 50) {
@@ -113,7 +114,13 @@ app.post('/chat', isLoggedIn, async (req, res) => {
         user: req.user._id, role: "user", content: prompt
     });
 
-    const previousMsgs = await Conversation.find({ user: req.user._id }).sort({ createdAt: 1 });
+    const previousMsgs = await Conversation.find({ user: req.user._id})
+    .sort({ createdAt: -1})
+    .limit(6)
+    .lean();
+
+    previousMsgs.reverse();
+
     console.log(previousMsgs);
 
     try {
